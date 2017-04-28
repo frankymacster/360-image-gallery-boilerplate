@@ -14,19 +14,31 @@
   <body>
     <a-scene>
       <a-assets>
-        <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-        <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
-        <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-        <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
         <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
-        <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-        <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+
+        <img id="s1" crossorigin="anonymous" src="assets/s1.jpg">
+        <img id="s2" crossorigin="anonymous" src="assets/s2.jpg">
+        <img id="s3" crossorigin="anonymous" src="assets/s3.jpg">
+        <img id="s4" crossorigin="anonymous" src="assets/s4.jpg">
+        <img id="s5" crossorigin="anonymous" src="assets/s5.jpg">
+
+        <img id="s6" crossorigin="anonymous" src="assets/s6.jpg">
+        <img id="s7" crossorigin="anonymous" src="assets/s7.jpg">
+        <img id="s8" crossorigin="anonymous" src="assets/s8.jpg">
+        <img id="s9" crossorigin="anonymous" src="assets/s9.jpg">
+        <img id="s10" crossorigin="anonymous" src="assets/s10.jpg">
+
+        <img id="s11" crossorigin="anonymous" src="assets/s11.jpg">
+        <img id="s12" crossorigin="anonymous" src="assets/s12.jpg">
+        <img id="s13" crossorigin="anonymous" src="assets/s13.jpg">
+        <img id="s14" crossorigin="anonymous" src="assets/s14.jpg">
+        <img id="s20" crossorigin="anonymous" src="assets/s20.jpg">
 
         <!-- Image link template to be reused. -->
         <script id="link" type="text/html">
           <a-entity class="link"
             geometry="primitive: plane; height: 1; width: 1"
-            material="shader: flat; src: ${thumb}"
+            material="shader: flat; color: blue"
             event-set__1="_event: mousedown; scale: 1 1 1"
             event-set__2="_event: mouseup; scale: 1.2 1.2 1"
             event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
@@ -37,13 +49,31 @@
       </a-assets>
 
       <!-- 360-degree image. -->
-      <a-sky id="image-360" radius="10" src="#city"></a-sky>
+      <a-sky id="image-360" radius="10" src="#s1"></a-sky>
 
       <!-- Image links. -->
-      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+      <a-entity id="links" layout="type: line; margin: 1.5" position="-4 -2.5 -4">
+        <a-entity template="src: #link" data-src="#s1"></a-entity>
+        <a-entity template="src: #link" data-src="#s2"></a-entity>
+        <a-entity template="src: #link" data-src="#s3"></a-entity>
+        <a-entity template="src: #link" data-src="#s4"></a-entity>
+        <a-entity template="src: #link" data-src="#s5"></a-entity>
+      </a-entity>
+
+      <a-entity id="links" layout="type: line; margin: 1.5" position="-4 -1 -4">
+        <a-entity template="src: #link" data-src="#s6"></a-entity>
+        <a-entity template="src: #link" data-src="#s7"></a-entity>
+        <a-entity template="src: #link" data-src="#s8"></a-entity>
+        <a-entity template="src: #link" data-src="#s9"></a-entity>
+        <a-entity template="src: #link" data-src="#s10"></a-entity>
+      </a-entity>
+
+      <a-entity id="links" layout="type: line; margin: 1.5" position="-4 0.5 -4">
+        <a-entity template="src: #link" data-src="#s11"></a-entity>
+        <a-entity template="src: #link" data-src="#s12"></a-entity>
+        <a-entity template="src: #link" data-src="#s13"></a-entity>
+        <a-entity template="src: #link" data-src="#s14"></a-entity>
+        <a-entity template="src: #link" data-src="#s20"></a-entity>
       </a-entity>
 
       <!-- Camera + cursor. -->
